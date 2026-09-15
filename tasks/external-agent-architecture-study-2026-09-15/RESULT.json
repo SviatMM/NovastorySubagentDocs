@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "task_id": "external-agent-architecture-study-2026-09-15",
+  "result_repository": "SviatMM/NovastorySubagentDocs",
+  "branch": "audit/external-agent-architecture-study-2026-09-15",
+  "research_date": "2026-09-15",
+  "status": "COMPLETE",
+  "scope": "Independent external research on agent architecture, GitHub result handoff, instruction composition/versioning, critical agent methods, multiple Smart Subagents, natural chat style, selective knowledge loading, and evaluation.",
+  "novastory_repository_accessed": false,
+  "novastory_repository_used_as_source": false,
+  "input_package": {
+    "name": "novastory-agent-files-audit",
+    "available_as_file_in_this_run": false,
+    "handling": "The supplied task text was used as the authoritative description of intent. No package-specific facts were inferred."
+  },
+  "result_files": [
+    "START_HERE.md",
+    "MAIN_RECOMMENDATIONS.md",
+    "GITHUB_RESULT_HANDOFF.md",
+    "INSTRUCTION_COMPOSITION_AND_VERSIONING.md",
+    "CRITICAL_AGENT_WORK_METHOD.md",
+    "MULTIPLE_SMART_SUBAGENTS.md",
+    "NATURAL_CHAT_STYLE.md",
+    "SELECTIVE_KNOWLEDGE_LOADING.md",
+    "EVALUATION_PLAN.md",
+    "EXTERNAL_SYSTEM_EXAMPLES.md",
+    "RISKS_AND_FAILURES.md",
+    "OWNER_DECISIONS.md",
+    "SOURCES.md",
+    "RESULT.json"
+  ],
+  "main_recommendations": {
+    "github_handoff_v1": "isolated run branch and task folder, authenticated push webhook, exact candidate commit SHA, shared validator, polling fallback, idempotent processing",
+    "instructions": "base role instruction first, owner instruction second, immutable versions, explicit diff/activation, permissions enforced outside prompt text",
+    "critical_agent": "task contract, selective delegation, structured integration, risk-proportional verification, evidence-based completion",
+    "multiple_subagents": "default one; parallel 2-3 only when independence, breadth, critique or verification creates measurable value",
+    "natural_chat": "answer first, then cause and consequence, explain precise terms, no automatic agreement or flattery, proportional structure",
+    "knowledge_v1": "root/domain/capability indexes plus source metadata and exact/keyword section retrieval; add semantic/hybrid/reranking/graph only after measured failures"
+  },
+  "open_owner_decisions": [
+    "credential strategy",
+    "direct commit vs PR promotion policy",
+    "signed commit requirement",
+    "owner instruction activation policy",
+    "instruction override zones",
+    "parallel Smart Subagent cap",
+    "mandatory verifier risk tiers",
+    "retrieval escalation thresholds",
+    "GraphRAG trigger",
+    "local vs cloud continuation policy",
+    "run branch/result retention",
+    "Agent vs Chat boundary",
+    "instruction artifact format",
+    "retry budget",
+    "evaluation thresholds"
+  ],
+  "source_policy": "Official documentation and primary/open-source/scientific sources were prioritized. Each source is documented in SOURCES.md with verification date and supported claim.",
+  "delivery_note": "The final Git commit SHA is intentionally not embedded in this file because a commit cannot self-contain its own hash without changing that hash. The delivery response and remote repository commit identify the exact result revision."
+}
