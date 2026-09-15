@@ -1,0 +1,48 @@
+{
+  "task_id": "NOVASTORY-NAVIGATION-CAPABILITY-KNOWLEDGE-AUDIT-001",
+  "status": "completed",
+  "audit_date": "2026-09-15",
+  "source": {
+    "repository": "SviatMM/novastory",
+    "branch": "main",
+    "commit": "2ca6ad9a38ee400b3b449dc1994e9ea66a5ca8b1",
+    "local_worktree_state": "unobservable_from_github_connector"
+  },
+  "delivery": {
+    "repository": "SviatMM/NovastorySubagentDocs",
+    "branch": "audit/NOVASTORY-NAVIGATION-CAPABILITY-KNOWLEDGE-AUDIT-001",
+    "path": "tasks/NOVASTORY-NAVIGATION-CAPABILITY-KNOWLEDGE-AUDIT-001/",
+    "result_commit": "SELF_BRANCH_HEAD_AFTER_COMMIT"
+  },
+  "assumptions": [
+    "Prompt left <TASK_ID> unresolved; audit uses NOVASTORY-NAVIGATION-CAPABILITY-KNOWLEDGE-AUDIT-001.",
+    "Prompt left <RESULT_REPOSITORY> unresolved; separately accessible SviatMM/NovastorySubagentDocs was selected."
+  ],
+  "summary": {
+    "human_ui": "Bounded live host operations exist for Chats, Projects, local sources, Project settings/resources, runtime discovery/Chat execution, provider credential custody, inspectors and local backup/restore.",
+    "chat_model": "Current chat_only model can reason over admitted text context and produce Chat output but has no general NovaStory action tool, shell/write/network-tool/MCP/plugin/delegation authority.",
+    "project_agent": "AgentTemplate and ProjectAgent identity/list/add/reuse/conflict are live; Mission/Job execution, memory contents, AgentInstructionSet lifecycle, subagents and publication/results are not built.",
+    "cloud_account": "Supabase/account/Auth/sync remain documentation-only/not built at audited commit.",
+    "automation_integrations": "Automation builder, Mail and Calendar have renderer UI, but automation execution and external Mail/Calendar connectors are not built."
+  },
+  "source_evidence_snapshot": {
+    "registered_tauri_commands": 61,
+    "typescript_command_wrappers": 59,
+    "production_ui_used_wrappers": 49,
+    "runtime_event_outer_kinds": 7,
+    "state_migrations": 7,
+    "device_migrations": 5,
+    "rust_tests_stage03": {"declared": 99, "passed": 96, "ignored_not_run": 3},
+    "renderer_tests": {"declared": 75, "passed": 75}
+  },
+  "critical_rules": [
+    "UI capability is not AI principal authority.",
+    "Registered command/wrapper is not proof of live active path.",
+    "Accepted target is not implementation.",
+    "DONE documentation goal does not imply runtime delivery.",
+    "Live model availability comes from runtime discovery.",
+    "Connected external resources do not become ambient model context.",
+    "ProjectAgent identity does not imply Mission execution.",
+    "Restore does not restore device grants or credentials."
+  ]
+}
