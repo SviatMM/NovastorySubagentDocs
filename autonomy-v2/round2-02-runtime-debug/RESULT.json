@@ -1,0 +1,175 @@
+{
+  "task": "autonomy-v2-round2-02-runtime-debug",
+  "ai_os_sha": "713928f1425374bac6dfdf13ba842d582ce5c37b",
+  "root_cause_proven": false,
+  "root_cause_candidates": [
+    {
+      "id": "A",
+      "candidate": "HOST_ENFORCED_TIMEOUT",
+      "status": "UNPROVEN",
+      "proof_needed": "Trusted deadline arm/fire and interrupt/kill provenance for the matching run/thread/turn; a model sentence or approximately 60-second duration is insufficient."
+    },
+    {
+      "id": "B",
+      "candidate": "NORMAL_OR_MODEL_INITIATED_TURN_COMPLETION",
+      "status": "UNPROVEN_IN_REPORTED_ENVIRONMENT",
+      "proof_needed": "Matching turn/completed with turn.status=completed and independently verified remaining work. This proves normal early completion, not the model's internal motivation."
+    },
+    {
+      "id": "C",
+      "candidate": "USAGE_OR_RESOURCE_LIMIT",
+      "status": "UNPROVEN",
+      "proof_needed": "Causal typed quota/throttle/session-budget error and observable account or controller budget state; preserve distinct subtypes and unknown coverage."
+    },
+    {
+      "id": "D",
+      "candidate": "TOOL_OR_RUNTIME_FAILURE",
+      "status": "UNPROVEN",
+      "proof_needed": "Correlated tool item, structured error, willRetry, subprocess status and terminal causal chain. Recoverable test failures are not automatically terminal tool failures."
+    },
+    {
+      "id": "E",
+      "candidate": "CLIENT_DOES_NOT_DISPATCH_CONTINUATION",
+      "status": "SOURCE_SUPPORTED_GAP_CANDIDATE_NOT_LIVE_PROOF",
+      "proof_needed": "Complete client trace showing normal turn end, verified eligible frontier and no subsequent dispatch; compare matched native and raw App Server cohorts."
+    },
+    {
+      "id": "F",
+      "candidate": "PROMPT_CHECKPOINT_OR_EXECUTION_WINDOW_EXIT_PATH",
+      "status": "SOURCE_INSPECTED_CAUSAL_HYPOTHESIS",
+      "proof_needed": "Matched D/E/F trials with the same fixture, authority and runtime but controlled checkpoint/window instructions. Existing source wording alone does not establish causation."
+    },
+    {
+      "id": "G",
+      "candidate": "OTHER_OR_UNOBSERVABLE_CAUSE",
+      "status": "OPEN",
+      "proof_needed": "Observe context/session budget, hooks/goals, pending input, policy errors, sleep/wake, transport and schema/runtime changes; otherwise retain UNKNOWN."
+    }
+  ],
+  "required_telemetry": [
+    "run_id",
+    "task_id and attempt_id",
+    "provider threadId",
+    "provider turnId",
+    "dispatch_id and RPC correlation",
+    "controller epoch, boot and process generation",
+    "client/Codex/model/provider/config/schema/instruction fingerprints",
+    "start and end monotonic time with clock domain",
+    "wall duration and duration-quality or censoring state",
+    "terminal protocol event and actual turn.status",
+    "normalized terminal category and evidence event IDs",
+    "subprocess exit code/signal/role/initiator",
+    "timeout source, scope, configuration, arm/reset/fire and stop provenance",
+    "distinct tool call count and item lifecycle",
+    "last tool/action and outstanding child operations",
+    "last structured error, codexErrorInfo and willRetry",
+    "observable usage-limit state, reset time and token accounting coverage",
+    "pending server/user-input requests and resolution provenance",
+    "authenticated cancellation and authority revisions",
+    "workspace/artifact identity and independently verified evidence receipts",
+    "durable runnable frontier at turn end and frontier completeness",
+    "incomplete admitted predicates and blocked dependency scope",
+    "unresolved dispatches/effects and replay-safety state",
+    "persistent failure/repair/review/alternative/turn/wall/usage budgets",
+    "Owner-response-gate decision and current state revision",
+    "next action/trigger, outbox ID and exact park resume condition",
+    "trace coverage gaps, redactions and unsupported observations"
+  ],
+  "minimum_supervisor": "One local Mac process owning a process-held exclusive lock, protected SQLite journal and budgets, a pinned Codex App Server stdio connection, one persistent thread and one active turn, an independently verified admitted task frontier, and the only terminal output channel. After turn/completed it reconciles state and issues the next turn/start on the same idle thread when work is safe and resources remain. Crash-surviving continuation additionally requires an actually installed OS process supervisor and tested recovery.",
+  "can_current_codex_ui_auto_continue": "Current official documentation describes native /goal and synchronous Stop-hook continuation on supported surfaces/builds. Availability and configuration in the reported installation are unverified. Prompt-only enforcement and a hook's ability to continue do not establish this project's strict durable-state/terminal-output gate; suppressOutput is documented as unimplemented. The proposed guarantee applies only to a controller-owned output boundary, not another open native UI. Use exactly one continuation driver.",
+  "implementation_stages": [
+    {
+      "id": "S0",
+      "deliverable": "Installed-runtime/schema/config preflight and isolated useful fixture",
+      "exit_evidence": "Pinned receipts and negative sandbox probe protecting controller state and acceptance checks."
+    },
+    {
+      "id": "S1",
+      "deliverable": "Passive recorder and causal terminal classifier",
+      "exit_evidence": "Synthetic replay coverage for terminal causes, races, lost ACKs and unknown events; model text cannot mint timeout evidence."
+    },
+    {
+      "id": "S2",
+      "deliverable": "Controlled natural-termination diagnosis",
+      "exit_evidence": "At least 12 consecutive trials in a completed cohort, exact evidence-backed category or explicit UNKNOWN for every observation, and matched native/App Server cohorts when available."
+    },
+    {
+      "id": "S3",
+      "deliverable": "Foreground minimum continuation supervisor",
+      "exit_evidence": "At least 10 useful consecutive accepted turns/task units with zero Owner Continue messages, persistent budgets, one active turn and one verified final or honest park."
+    },
+    {
+      "id": "S4",
+      "deliverable": "Crash recovery and separately authorized local startup supervisor",
+      "exit_evidence": "Orphan quiescence, same-run recovery, cancellation/budget persistence, ambiguous-dispatch reconciliation and actual installed restart behaviour."
+    },
+    {
+      "id": "S5",
+      "deliverable": "Optional narrow consequential-effect adapters",
+      "exit_evidence": "Per-effect authorization, intent/receipt and reconciliation tests before expanding beyond reversible local work; not a prerequisite for S3."
+    }
+  ],
+  "owner_decisions_required": [
+    {
+      "id": "D1",
+      "decision": "Approve the controller-owned execution/output surface and exact initial local workspace/action scope, unless already covered by an existing explicit grant.",
+      "needed_before": "deployment or admission of real work",
+      "blocks_this_research": false
+    },
+    {
+      "id": "D2",
+      "decision": "Approve finite resource ceilings, handling of unobservable usage and any permitted runtime/model substitutions; proposed pilot values are not spending authorization.",
+      "needed_before": "live experiments or supervised work consuming approved resources",
+      "blocks_this_research": false
+    },
+    {
+      "id": "D3",
+      "decision": "Approve local journal privacy/retention and any login/background startup installation; genuine credential or OS-consent steps remain separate external-permission events.",
+      "needed_before": "sensitive capture or persistent installation",
+      "blocks_this_research": false
+    }
+  ],
+  "design_status": "PROPOSED_NOT_IMPLEMENTED",
+  "empirical_status": {
+    "live_codex_turns_executed_in_this_research": 0,
+    "user_mac_runtime_accessed": false,
+    "production_root_cause_measured": false,
+    "minimum_planned_trials_per_completed_cohort": 12,
+    "planned_conditions": ["trivial", "multi_step_repository", "explicit_long_safe", "durable_todo_queue", "no_checkpoint_language", "current_AUTONOMOUS_BLOCK"],
+    "minimum_planned_automatic_continuation_turns_or_task_units": 10,
+    "artificial_time_filling_allowed": false
+  },
+  "source_pins": {
+    "agent_02": "4562b8e453e3e37cc3d96ee09bf6f468322710f3",
+    "agent_03": "1c53a1b09a802b1fb0ee3045d0b3c0568eecafe3",
+    "openai_codex_inspected_main": "c6c09fe29fb0b926ced5146e6ed47b6ff756c1a4",
+    "openai_symphony_inspected_main": "be10a1b79df723d6d7612b5651c8522704dafb2e",
+    "observation_date": "2026-09-22",
+    "installed_runtime_version": null,
+    "read_scope_and_official_source_links": "RUNTIME_DIAGNOSIS.md"
+  },
+  "safety_contract": {
+    "model_sentence_is_runtime_evidence": false,
+    "execution_window_limit_assignment": "Controller only, with matching trusted external runtime evidence.",
+    "budget_scope": "Persistent per run and stable obligation; new turns, replans and restarts do not reset consumption.",
+    "automatic_continuation_is_infinite": false,
+    "unknown_effect_replay": "Prohibited until authoritative reconciliation establishes a safe next action.",
+    "operational_exhaustion_is_owner_blocker": false,
+    "mvp_is_general_effect_gateway": false,
+    "source_private_text_copied": false,
+    "personal_local_paths_or_credentials_included": false
+  },
+  "publication": {
+    "repository": "SviatMM/NovastorySubagentDocs",
+    "branch": "research/autonomy-v2-round2-02-runtime-debug",
+    "directory": "autonomy-v2/round2-02-runtime-debug/",
+    "base_main_sha": "128a1b72f51f031de0fc4ec7f4d46e30fbd2675f",
+    "commit_message": "research: design runtime continuation and autonomy debug",
+    "method": "GitHub Git-data commit and new branch publication without force update.",
+    "ai_os_modified": false,
+    "novastory_modified": false,
+    "pull_request_created": false,
+    "merge_performed": false,
+    "commit_sha_receipt": "The containing Git commit and remotely verified branch ref identify publication; no self-referential SHA is embedded."
+  }
+}
