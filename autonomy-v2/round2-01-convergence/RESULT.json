@@ -1,0 +1,91 @@
+{
+  "task": "autonomy-v2-round2-01-convergence",
+  "ai_os_sha": "713928f1425374bac6dfdf13ba842d582ce5c37b",
+  "greenfield_sha": "4562b8e453e3e37cc3d96ee09bf6f468322710f3",
+  "redteam_sha": "1c53a1b09a802b1fb0ee3045d0b3c0568eecafe3",
+  "recommended_minimum_architecture": "Retain AUTONOMOUS_BLOCK and product-local admission; add one trusted single-host controller, one protected transactional SQLite journal, a finite dependency scheduler, actual response/action gates, isolated sequential worker and independent review, evidence verification, automatic model-turn continuation, and narrow intent/reconciliation adapters for required Git or external effects. STATUS.md is a dated journal projection, not a second authority.",
+  "implement_now": [
+    "Stage 1: seal versioned obligations; strict types and unique IDs; derive applicability and coverage; reject fabricated or stale completion; negative tests.",
+    "Stage 2: controller-owned real response/action boundary; protected grants and journal; baseline worker/credential isolation; process-held single-writer lock and local generation.",
+    "Stage 2: TURN_END_RECEIPT and CONTINUATION_DECISION; automatic next turn without Owner input; host-evidenced WINDOW_LIMIT_RECEIPT; installed local restart/wake mechanism.",
+    "Stage 2: finite persistent budgets/candidates, honest operational pause, current-basis evidence and independent-review bindings, capability drift checks and STATUS cutover.",
+    "Stage 3, before supported external writes: stable effect intent, exact Git scope, verified remote ref, provider-specific deduplication/reconciliation and quarantine of unknown opaque effects."
+  ],
+  "defer": [
+    "Distributed leases, multi-host failover and shared/distributed storage until a separately approved need and real fencing design exist.",
+    "Broad parallel worker pools and mandatory provider-diverse review until measured benefit and approved cost/security bounds.",
+    "Separate authority service, generalized workflow language, global content-addressed storage service, hash-chain infrastructure and dedicated dashboard.",
+    "Additional runtime adapters and provider integrations beyond the first pinned CLI lane and actually needed effects."
+  ],
+  "reject": [
+    "Model prose as evidence of EXECUTION_WINDOW_LIMIT or process exit as proof of run completion.",
+    "Optional response gates, routine Owner continue messages, caller-controlled applicability, self-certified tests/review/push, and deletion or N/A laundering of blocked obligations.",
+    "Competing STATUS.md/database authorities or Markdown execution fallback after journal failure.",
+    "Unbounded no-return loops, universal alternatives-exhausted proofs and automatic Owner escalation for ordinary technical failure.",
+    "Unconditional exactly-once effects, blind uncertain replay, local epoch as proof of remote cancellation, or force-push fallback.",
+    "Mandatory Kubernetes/etcd/distributed database, wholesale AI OS renaming, duplicate product requirements, or solving NovaStory Agent runtime in this work.",
+    "Strong enforcement claims with unrestricted workers or without a verified real runtime integration and restart mechanism."
+  ],
+  "owner_decisions_required": [
+    {
+      "id": "O1",
+      "decision": "Authorize the subsequent bounded AI OS implementation increment; this task authorizes only research publication.",
+      "when": "before implementation",
+      "blocks_this_research": false
+    },
+    {
+      "id": "O2",
+      "decision": "Approve any new host process/credential isolation boundary, private local storage/retention and promised recovery domain, and installed restart/wake mechanism. Reuse sufficient existing approvals.",
+      "when": "before Stage 2 activation",
+      "blocks_this_research": false
+    },
+    {
+      "id": "O3",
+      "decision": "Approve missing finite usage limits, operational-pause policy and material model/reviewer substitution bounds; no approval per routine turn or technical repair.",
+      "when": "before Stage 2 activation",
+      "blocks_this_research": false
+    },
+    {
+      "id": "O4",
+      "decision": "Resolve only missing exact Git ref/service/principal, branch-creation, downstream-effect and consequential external-operation permissions.",
+      "when": "before the corresponding Stage 3 adapter is enabled",
+      "blocks_this_research": false
+    },
+    {
+      "id": "O5",
+      "decision": "Approve broader worker delegation only if later expansion changes cost, security or a manual-only specialist boundary.",
+      "when": "conditional Stage 4 only",
+      "blocks_this_research": false
+    }
+  ],
+  "first_implementation_increment": "Seal obligations and reject fabricated completion: Stage 1 schema/manifest/coverage/invalidation correctness and deterministic tests T01-T08. Explicitly report record correctness only; next implement the real Stage 2 automatic-turn, gated-action and recovery vertical slice.",
+  "design_status": "PROPOSED_NOT_IMPLEMENTED",
+  "agent_01_result": "NO_PUBLISHED_RESULT_SUPPLIED; excluded",
+  "source_tree_sha": "80ddc05d1556828fbd2f1ef0476f0ac6d4cff443",
+  "evidence_scope": {
+    "method": "Pinned-source inspection and convergence of Agent 02 architecture/scenarios and Agent 03 attacks/defenses.",
+    "new_ai_os_runtime_tests_executed": false,
+    "new_codex_end_to_end_tests_executed": false,
+    "acceptance_tests": "T01-T32 are proposed deterministic tests, with an additional required pinned-host conformance exit in Stage 2.",
+    "inherited_redteam_probe_results": "Reported by Agent 03, not rerun by this convergence task.",
+    "unobserved_local_installations": "No claim about the Owner computer or hidden local supervisors."
+  },
+  "publication": {
+    "repository": "SviatMM/NovastorySubagentDocs",
+    "branch": "research/autonomy-v2-round2-01-convergence",
+    "directory": "autonomy-v2/round2-01-convergence/",
+    "base_main_sha": "128a1b72f51f031de0fc4ec7f4d46e30fbd2675f",
+    "commit_message": "research: converge autonomous execution v2",
+    "method": "Git data objects followed by non-force fast-forward branch update; containing commit is the publication receipt.",
+    "source_repositories_modified": false,
+    "main_modified_by_this_task": false,
+    "pull_request_created": false,
+    "merge_performed": false,
+    "force_push_performed": false
+  },
+  "public_result_safety": {
+    "private_source_copied_verbatim": false,
+    "credentials_tokens_private_urls_personal_paths_included": false,
+    "source_references": "Repository-relative locators, immutable SHA identities and synthesized analysis only."
+  }
+}
