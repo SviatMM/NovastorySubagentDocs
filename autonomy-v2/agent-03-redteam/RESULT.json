@@ -1,0 +1,160 @@
+{
+  "task": "autonomy-v2-agent-03-redteam",
+  "source_sha": "713928f1425374bac6dfdf13ba842d582ce5c37b",
+  "critical_breaks": [
+    {"id": "A03", "title": "Runtime silently auto-updates after preflight"},
+    {"id": "A04", "title": "API schema drift changes the meaning of an authorized action"},
+    {"id": "A08", "title": "External write succeeds but response times out, enabling duplicate effects"},
+    {"id": "A12", "title": "Stale tests remain green after their source or runtime basis changes"},
+    {"id": "A13", "title": "All tests pass while an Owner requirement is missing"},
+    {"id": "A15", "title": "Stale, revoked, or wrong-target authorization envelope is accepted"},
+    {"id": "A16", "title": "Workers continue under superseded Owner intent"},
+    {"id": "A19", "title": "Disk-full checkpoint failure loses the record of an external effect"},
+    {"id": "A21", "title": "Removed or replaced worktree is mistaken for the owned checkout"},
+    {"id": "A23", "title": "Duplicate automation resume performs the same effect twice"},
+    {"id": "A24", "title": "Two agents resume the same state without enforced mutation ownership"},
+    {"id": "A31", "title": "Technical remediation silently expands admitted scope"},
+    {"id": "A32", "title": "An available alternative is chosen without authority or requirement equivalence"},
+    {"id": "A33", "title": "Architecture or security decision is hidden inside implementation"},
+    {"id": "A35", "title": "Git success overrides a failed or unverified external outcome"},
+    {"id": "A36", "title": "Review remediation is marked complete without tests or valid rereview"},
+    {"id": "A37", "title": "Empty applicable-predicate set closes unfinished work"},
+    {"id": "A38", "title": "Required live proof is declared not applicable merely to close"},
+    {"id": "A39", "title": "Replanning erases a blocked acceptance predicate"},
+    {"id": "A40", "title": "Fabricated evidence or green flags are accepted as proof"},
+    {"id": "A41", "title": "Worker self-report substitutes for independent observation"},
+    {"id": "A42", "title": "Generic push permission publishes to the wrong branch or repository"},
+    {"id": "A43", "title": "Broad staging commits unrelated dirty work"},
+    {"id": "A44", "title": "A stale or shared path enables overwriting another worktree"},
+    {"id": "A45", "title": "An unsafe or unknown-outcome operation is retried"},
+    {"id": "A47", "title": "REJECT or technical failure does not invalidate previous green predicates"},
+    {"id": "A51", "title": "READ_ONLY Git invocation executes an effectful ambient helper"},
+    {"id": "A52", "title": "Duplicate requirement ID shadows an accepted hard constraint"}
+  ],
+  "high_risk_breaks": [
+    {"id": "A01", "title": "Unavailable model causes false escalation or unauthorized substitution"},
+    {"id": "A02", "title": "Runtime version mismatch is mistaken for an executable capability"},
+    {"id": "A05", "title": "Intermittent network creates unbounded or unsafe retries"},
+    {"id": "A06", "title": "Login expiry loses principal binding or effect progress"},
+    {"id": "A07", "title": "2FA challenge is misclassified as technical repair"},
+    {"id": "A09", "title": "Successful Git push with client failure is not reconciled"},
+    {"id": "A10", "title": "Wrong reviewer verdict is treated as authoritative"},
+    {"id": "A11", "title": "Reviewer and implementer disagree without bounded adjudication"},
+    {"id": "A14", "title": "Badly scoped current increment traps or silently shrinks the work"},
+    {"id": "A17", "title": "Lost chat context causes invented intent or unsafe replay"},
+    {"id": "A18", "title": "Execution-window end suppresses an honest stop or creates a false resume promise"},
+    {"id": "A20", "title": "Locked state database causes endless waiting or persistence bypass"},
+    {"id": "A22", "title": "Upstream advance invalidates grounding and verification"},
+    {"id": "A25", "title": "Deleted evidence references leave unsupported green claims"},
+    {"id": "A26", "title": "Disappearing dependency triggers endless research or a material unauthorized replacement"},
+    {"id": "A27", "title": "Universal alternatives-exhausted proof prevents termination"},
+    {"id": "A28", "title": "Difficult reasoning is disguised as OWNER_BLOCKER"},
+    {"id": "A29", "title": "Autonomous repair repeats without persistent progress budgets"},
+    {"id": "A30", "title": "Agent returns early without invoking an optional gate"},
+    {"id": "A34", "title": "Stale authored STATUS overrides current Git observations"},
+    {"id": "A46", "title": "Resume key presence hides null or contradictory state"},
+    {"id": "A48", "title": "Evaluator exit code zero is mistaken for completed delivery"},
+    {"id": "A49", "title": "Malformed state crashes the evaluator without a structured verdict"},
+    {"id": "A50", "title": "Matching fingerprints admit a package containing failed S3 gates"}
+  ],
+  "minimum_required_defenses": [
+    {"id": "D01", "title": "Strict action and response gate at the actual integration boundary"},
+    {"id": "D02", "title": "Versioned obligations preserved through admission, applicability, and replanning"},
+    {"id": "D03", "title": "Effective scoped authorization with action-time revocation and intent-generation checks"},
+    {"id": "D04", "title": "Capability freshness and relevant runtime identity checked at the point of use"},
+    {"id": "D05", "title": "Durable journal, validated checkpoints, and failure-aware reconciliation"},
+    {"id": "D06", "title": "Single active writer with atomic claims and enforced fencing where takeover exists"},
+    {"id": "D07", "title": "Durable effect intent, stable operation identity, supported deduplication, and reconciliation"},
+    {"id": "D08", "title": "Owned Git worktree and staging scope, explicit publication target, remote ref verification"},
+    {"id": "D09", "title": "Protected observed evidence, frozen review basis, behavioral coverage, and predicate invalidation"},
+    {"id": "D10", "title": "Persistent progress budgets, finite eligible alternatives, and honest operational stops"},
+    {"id": "D11", "title": "Narrow effect mediation and an enforced rather than declarative read-only boundary"}
+  ],
+  "design_elements_that_survived_attack": [
+    {
+      "element": "Product outcome, capability, increment, and task remain distinct",
+      "status": "Sound documented boundary, not proof that every increment is correctly scoped",
+      "evidence": ["S05", "S06", "S14"]
+    },
+    {
+      "element": "Capability availability is separate from authority",
+      "status": "Sound documented distinction; general action-time enforcement is still needed",
+      "evidence": ["S06", "S08"]
+    },
+    {
+      "element": "Recognized Owner-only, external-permission, and execution-window events are distinguished",
+      "status": "Reproduced for the recognized event classes; free-text and semantic classification remain limited",
+      "evidence": ["C02", "C03", "C04"]
+    },
+    {
+      "element": "A declared required predicate that is false blocks final completion",
+      "status": "Positive control passed; caller-controlled applicability remains vulnerable",
+      "evidence": ["C01", "C05", "P01", "P02"]
+    },
+    {
+      "element": "Selected hard-reference, superseded-decision, and unequal-baseline checks",
+      "status": "Positive controls passed; these do not establish semantic coverage or current external authority",
+      "evidence": ["C06", "C07", "C08", "S07"]
+    },
+    {
+      "element": "Context freshness validator reads actual selected files and Git",
+      "status": "Implementation inspected, not newly executed in this audit; not a general live-capability freshness mechanism",
+      "evidence": ["S09"]
+    },
+    {
+      "element": "S3c checks declared authorization scope and evidence basis",
+      "status": "Implementation inspected; declared provenance is not authenticated general execution authority",
+      "evidence": ["S11"]
+    },
+    {
+      "element": "S3d has a real bounded runner with explicit execution, digest, timeout, and receipt-path checks",
+      "status": "Implementation inspected and selected components probed; not a general orchestrator or a proven no-effect sandbox",
+      "evidence": ["S10", "P21", "P22"]
+    },
+    {
+      "element": "Implementation claims, worker reports, acceptance, and platform limits are distinguished in policy",
+      "status": "Useful contract preserved; original goal honestly scoped a simulator rather than a general orchestration runtime",
+      "evidence": ["S03", "S05", "S14"]
+    }
+  ],
+  "verdict": "needs revision",
+  "audit_scope": {
+    "date": "2026-09-22",
+    "source_repository": "SviatMM/ai-operating-system",
+    "source_branch": "main",
+    "source_tree_sha": "80ddc05d1556828fbd2f1ef0476f0ac6d4cff443",
+    "result_branch": "research/autonomy-v2-agent-03-redteam",
+    "result_directory": "autonomy-v2/agent-03-redteam/",
+    "scenario_count": 52,
+    "critical_scenario_count": 28,
+    "high_risk_scenario_count": 24,
+    "attack_goals_covered": 25,
+    "mandatory_triggers_covered": 26,
+    "interpretation": "Scenario counts are not counts of independent code defects or live exploits. Per-scenario reproduced, inspected, and proposed evidence classifications are in FAILURE_MATRIX.md.",
+    "limits": [
+      "Inspected pinned active workflow, adapter, validators, simulator, bounded runner, and relevant goal evidence; not an exhaustive audit of every historical file.",
+      "No live Codex end-to-end session or production failure injection was performed.",
+      "No payments, credential operations, duplicate external messages, production mutations, or owner-worktree destruction were performed.",
+      "No source AI OS or NovaStory files were changed. Defenses are proposals, not implemented fixes."
+    ]
+  },
+  "verification": {
+    "method": "Selected connector-returned source copies were verified against Git blob SHA before isolated local execution.",
+    "runtime": {"os": "Linux", "python": "3.13.5", "git_for_helper_probe": "2.47.3"},
+    "negative_component_probes_reproduced": 22,
+    "negative_probe_ids": ["P01", "P02", "P03", "P04", "P05", "P06", "P07", "P08", "P09", "P10", "P11", "P12", "P13", "P14", "P15", "P16", "P17", "P18", "P19", "P20", "P21", "P22"],
+    "negative_probe_meaning": "The unwanted component behavior was reproduced; this is not a safety pass or proof of a complete live exploit.",
+    "positive_controls_passed": 8,
+    "positive_control_ids": ["C01", "C02", "C03", "C04", "C05", "C06", "C07", "C08"],
+    "existing_autonomous_block_tests_rerun": 5,
+    "existing_autonomous_block_tests_passed": 5,
+    "historical_71_test_regression_suite_rerun": false,
+    "test_details": "ATTACK_REPORT.md sections 4 and 5",
+    "source_blobs": {
+      "scripts/simulate_autonomous_block.py": "12bfed693b9444d8e39fe7d7a128dfc9bdcc89e7",
+      "extensions/tests/test_simulate_autonomous_block.py": "59dbdf4bb2121a6730f386050372941190fa4522",
+      "scripts/validate_admission_traceability.py": "996f0d865a5b22672a5805747fd0977d67dd8d6d",
+      "scripts/run_pef_activation.py": "a11781ddf7d564c18738ce46f769054f8f88442e"
+    }
+  }
+}
