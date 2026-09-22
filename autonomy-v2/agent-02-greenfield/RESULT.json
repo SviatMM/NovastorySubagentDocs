@@ -1,0 +1,338 @@
+{
+  "task": "autonomy-v2-agent-02-greenfield",
+  "source_sha": "713928f1425374bac6dfdf13ba842d582ce5c37b",
+  "recommended_architecture": "Authority-Bounded Durable Execution Kernel (ABDEK): retain AI OS policy and product-knowledge layers; add a protected authority registry, transactional run journal, predicate-graph scheduler, evidence verifier, effect gateway and idempotent reconciliation.",
+  "largest_current_ai_os_gaps": [
+    {
+      "id": "G01",
+      "gap": "Authority rules are not a demonstrated per-effect reference monitor.",
+      "source_refs": [
+        "S04",
+        "S05",
+        "S11"
+      ],
+      "confidence": "source-inspected; bounded to the reviewed execution path"
+    },
+    {
+      "id": "G02",
+      "gap": "Inspected resume path does not demonstrate a durable effect-intent, receipt and uncertain-outcome reconciliation protocol.",
+      "source_refs": [
+        "S10",
+        "S15"
+      ],
+      "confidence": "source-inspected; bounded to the reviewed execution path"
+    },
+    {
+      "id": "G03",
+      "gap": "Policy simulator accepts caller-provided applicability and predicate assertions rather than independently verifying artifact and remote evidence.",
+      "source_refs": [
+        "S11"
+      ],
+      "confidence": "source-inspected; bounded to the reviewed execution path"
+    },
+    {
+      "id": "G04",
+      "gap": "Readable STATUS lacks a demonstrated transactional conflict/reconciliation protocol with Git and external effects.",
+      "source_refs": [
+        "S03",
+        "S07",
+        "S15"
+      ],
+      "confidence": "source-inspected; bounded to the reviewed execution path"
+    },
+    {
+      "id": "G05",
+      "gap": "Single blocker/next-action representation does not encode a schedulable per-predicate dependency frontier with alternatives.",
+      "source_refs": [
+        "S06",
+        "S07",
+        "S11",
+        "S15"
+      ],
+      "confidence": "source-inspected; bounded to the reviewed execution path"
+    },
+    {
+      "id": "G06",
+      "gap": "Documented session continuation does not establish a deployed supervisor that resumes without Owner message relay.",
+      "source_refs": [
+        "S06",
+        "S07",
+        "S14"
+      ],
+      "confidence": "source-inspected; bounded to the reviewed execution path"
+    },
+    {
+      "id": "G07",
+      "gap": "Capability staleness awareness is not a complete execution-lock, model-substitution and crash-compatible schema-migration protocol.",
+      "source_refs": [
+        "S10",
+        "S12",
+        "S15"
+      ],
+      "confidence": "source-inspected; bounded to the reviewed execution path"
+    },
+    {
+      "id": "G08",
+      "gap": "Inspected review path does not enforce independent reviewer identity and exact integrated-artifact acceptance bindings.",
+      "source_refs": [
+        "S08",
+        "S10",
+        "S11"
+      ],
+      "confidence": "source-inspected; bounded to the reviewed execution path"
+    },
+    {
+      "id": "G09",
+      "gap": "Canonical-writer policy does not establish lease fencing and compare-and-swap integration for overlapping workers.",
+      "source_refs": [
+        "S04",
+        "S07"
+      ],
+      "confidence": "source-inspected; bounded to the reviewed execution path"
+    }
+  ],
+  "parts_to_keep": [
+    "One accountable local CPTO and optional remote handoff, not a mandatory Owner message bus.",
+    "Repository grounding, product-local admission, hard constraints and prohibited substitutions.",
+    "Complete outcome, adaptive delivery map and bounded increments.",
+    "Risk-matched implementation, test, repair and independent-review loops.",
+    "Rule against repeating materially identical failed repairs without new investigation.",
+    "Product-local canonical knowledge, accepted decisions, unapproved ideas and derived contexts.",
+    "Capability truth separated from authority and limited to the actually verified workflow.",
+    "Explicit manual-only specialist lanes and honest physical session-limit handling.",
+    "Existing traceability validators and narrowly scoped fingerprint-bound read-only runner."
+  ],
+  "parts_to_replace": [
+    "Mutable STATUS/checklists as authoritative execution state: replace with rebuildable projections of a transactional journal.",
+    "Self-asserted completion booleans and caller-selected required predicates as runtime proof: replace with contract-bound evidence verification.",
+    "Single global blocker classification as scheduler state: replace with per-predicate waits and independent runnable frontier.",
+    "Prompt-only authority enforcement: replace with authenticated versioned grants and non-bypassable per-effect gates.",
+    "Transcript/manual-message continuation as a required execution mechanism: replace with durable supervisor-driven recovery.",
+    "Blind retries after uncertain effects: replace with adapter-specific idempotency and authoritative reconciliation.",
+    "Advisory single-writer discipline alone: augment with isolated worktrees, fencing and serialized CAS integration."
+  ],
+  "material_owner_decisions_needed": [
+    {
+      "id": "D01",
+      "decision": "Control-plane and evidence storage location, privacy, backup and promised failure domain.",
+      "stage": "before deployment of the proposed architecture",
+      "status": "not approved by this research",
+      "blocks_this_research": false
+    },
+    {
+      "id": "D02",
+      "decision": "Outcome-level scope and authority for autonomous admission of subsequent increments.",
+      "stage": "before deployment of the proposed architecture",
+      "status": "not approved by this research",
+      "blocks_this_research": false
+    },
+    {
+      "id": "D03",
+      "decision": "Finite spending, usage, concurrency, repair and diagnostic-search budgets.",
+      "stage": "before deployment of the proposed architecture",
+      "status": "not approved by this research",
+      "blocks_this_research": false
+    },
+    {
+      "id": "D04",
+      "decision": "Approved model/runtime substitutions and independent-review diversity requirements.",
+      "stage": "before deployment of the proposed architecture",
+      "status": "not approved by this research",
+      "blocks_this_research": false
+    },
+    {
+      "id": "D05",
+      "decision": "Kernel security boundary, grant administration, credentials handles and update authority.",
+      "stage": "before deployment of the proposed architecture",
+      "status": "not approved by this research",
+      "blocks_this_research": false
+    },
+    {
+      "id": "D06",
+      "decision": "Permitted Git refs and downstream effects; separate production and irreversible-effect permissions.",
+      "stage": "before deployment of the proposed architecture",
+      "status": "not approved by this research",
+      "blocks_this_research": false
+    }
+  ],
+  "design_status": "PROPOSED_ARCHITECTURE_NOT_IMPLEMENTED",
+  "source_repository": "SviatMM/ai-operating-system",
+  "source_ref_observed": "refs/heads/main",
+  "source_tree_sha": "80ddc05d1556828fbd2f1ef0476f0ac6d4cff443",
+  "source_observation_date": "2026-09-22",
+  "method": {
+    "first_principles_before_source_read": true,
+    "architecture_frozen_at_utc": "2026-09-22T12:04:49.667548+00:00",
+    "architecture_freeze_sha256": "0961b1e637bf3731bf24a1e31d4e29aed992dc9c9ed02532c1cedf15f2207d4d",
+    "architecture_unchanged_since_freeze": true,
+    "source_repository_reads_before_freeze": 0,
+    "source_files_read_count": 15,
+    "source_scripts_executed": false,
+    "novastory_accessed": false,
+    "other_autonomy_v2_agent_results_read": false,
+    "full_recursive_tree_response_truncated": true,
+    "absence_claim_scope": "Reviewed execution path only; no claim about unobserved local installations or every repository file."
+  },
+  "scenario_evaluation": {
+    "method": "Architecture-level state-transition walkthroughs with future executable acceptance oracles.",
+    "required_count": 20,
+    "covered_ids": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+    ],
+    "live_or_production_tests_run": false,
+    "production_pass_rate_claimed": false,
+    "unconditional_completion_claimed": false,
+    "critical_conditions": [
+      "Duplicate-free business effects require a verified idempotent or transactional sink contract.",
+      "Opaque uncertain effects are quarantined rather than blindly retried.",
+      "Automatic multi-session continuation requires an actual deployed supervisor.",
+      "Required live proof or push cannot be silently removed from the contract.",
+      "Independent admitted work continues while one dependency waits."
+    ]
+  },
+  "artifact_checks": {
+    "checks_executed_locally": [
+      "UTF-8 decode",
+      "JSON parse and required keys",
+      "20 unique numbered scenario sections",
+      "balanced fenced code blocks",
+      "frozen architecture digest equality",
+      "source identifier format",
+      "public-output secret and personal-path pattern scan"
+    ],
+    "scope": "Document structure and publication safety patterns only; not semantic proof or runtime tests."
+  },
+  "public_result_safety": {
+    "source_text_or_code_copied_verbatim": false,
+    "source_locators_only": true,
+    "credentials_included": false,
+    "personal_local_paths_included": false,
+    "raw_source_download_urls_included": false
+  },
+  "publication": {
+    "repository": "SviatMM/NovastorySubagentDocs",
+    "branch": "research/autonomy-v2-agent-02-greenfield",
+    "base_main_sha": "128a1b72f51f031de0fc4ec7f4d46e30fbd2675f",
+    "directory": "autonomy-v2/agent-02-greenfield/",
+    "commit_message": "research: design autonomous execution from first principles",
+    "method": "GitHub Git-data objects and non-force fast-forward branch update.",
+    "main_update_authorized": false,
+    "force_push_authorized": false,
+    "pull_request_authorized": false,
+    "merge_authorized": false,
+    "commit_identity_note": "The containing Git commit is the publication receipt; no self-referential commit SHA is embedded."
+  },
+  "source_evidence": [
+    {
+      "id": "S01",
+      "path": "README.md",
+      "blob_sha": "d408a0cd39d5b827ce29f0fe64344b9c4cab363d"
+    },
+    {
+      "id": "S02",
+      "path": "core/PRINCIPLES.md",
+      "blob_sha": "8e356c75ee7effb0cd55223ece7fdee1a65c55ad"
+    },
+    {
+      "id": "S03",
+      "path": "core/AI_WORKFLOW.md",
+      "blob_sha": "2af3dd099c309b2870f21976b22e66ae0dda496e"
+    },
+    {
+      "id": "S04",
+      "path": "profiles/cpto/PROFILE.md",
+      "blob_sha": "3f3e4bbd40f3e9677493cda3b211e64cab0a6b19"
+    },
+    {
+      "id": "S05",
+      "path": "core/WORK_ADMISSION_PROTOCOL.md",
+      "blob_sha": "3e92c62eec5a7747cb94dcff8d261da67e7b5925"
+    },
+    {
+      "id": "S06",
+      "path": "core/ADAPTIVE_DELIVERY.md",
+      "blob_sha": "0db03722d599ca144c0cdb7cec959f17960f95d8"
+    },
+    {
+      "id": "S07",
+      "path": "adapters/codex/.agents/skills/deliver-large-projects/SKILL.md",
+      "blob_sha": "9246734eef29648f91b36d87288999fa7387e127"
+    },
+    {
+      "id": "S08",
+      "path": "adapters/codex/.agents/skills/deliver-large-projects/references/quality-loops.md",
+      "blob_sha": "bbfcac461b8b127985ca19bd41491dcca773c5de"
+    },
+    {
+      "id": "S09",
+      "path": "scripts/validate_admission_traceability.py",
+      "blob_sha": "996f0d865a5b22672a5805747fd0977d67dd8d6d"
+    },
+    {
+      "id": "S10",
+      "path": "templates/product-repository/goals/_template/plans/CURRENT_INCREMENT.md",
+      "blob_sha": "d6af34395398a7b20698942b761842f098bf82be"
+    },
+    {
+      "id": "S11",
+      "path": "scripts/simulate_autonomous_block.py",
+      "blob_sha": "12bfed693b9444d8e39fe7d7a128dfc9bdcc89e7"
+    },
+    {
+      "id": "S12",
+      "path": "core/CAPABILITY_TRUTH_REGISTRY.md",
+      "blob_sha": "d5af04fe6fb94a9935672524af86535db3317683"
+    },
+    {
+      "id": "S13",
+      "path": "scripts/run_pef_activation.py",
+      "blob_sha": "a11781ddf7d564c18738ce46f769054f8f88442e"
+    },
+    {
+      "id": "S14",
+      "path": "adapters/codex/AGENTS.md",
+      "blob_sha": "3a281a31a0fa9e49e04f672245bdf520fad26f1f"
+    },
+    {
+      "id": "S15",
+      "path": "templates/product-repository/goals/_template/STATUS.md",
+      "blob_sha": "4cc6ab05398bf5f35a022097f9a17c72b0e25e27"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "autonomy-v2/agent-02-greenfield/GREENFIELD_ARCHITECTURE.md",
+      "sha256": "0961b1e637bf3731bf24a1e31d4e29aed992dc9c9ed02532c1cedf15f2207d4d",
+      "bytes": 56160
+    },
+    {
+      "path": "autonomy-v2/agent-02-greenfield/COMPARISON.md",
+      "sha256": "5e08ca1d0f73c7f7d311cf8518a20bbc302eea3d02e083ceeec7ecfcc5816c1c",
+      "bytes": 32775
+    },
+    {
+      "path": "autonomy-v2/agent-02-greenfield/SCENARIO_RESULTS.md",
+      "sha256": "4f250e6909c88e734a67fa755eabc70caf08d4d806505cc6e5fc03b8db2bd914",
+      "bytes": 40127
+    }
+  ]
+}
